@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Migrating From Lunar - Unofficial Forge User Documentation</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">About</li><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Readme</a></li><li class="chapter-item expanded affix "><li class="part-title">Forge: The Basics</li><li class="chapter-item expanded "><a href="../forge-intro/forge-introduction.html"><strong aria-hidden="true">2.</strong> Introduction To Forge 1.8.9</a></li><li class="chapter-item expanded "><a href="../forge-intro/patcher.html"><strong aria-hidden="true">3.</strong> Patcher Explanation and Feature List</a></li><li class="chapter-item expanded affix "><li class="part-title">Migrating From a Client</li><li class="chapter-item expanded "><a href="../client-migration/badlion.html"><strong aria-hidden="true">4.</strong> Migrating From Badlion</a></li><li class="chapter-item expanded "><a href="../client-migration/lunar.html" class="active"><strong aria-hidden="true">5.</strong> Migrating From Lunar</a></li><li class="chapter-item expanded affix "><li class="part-title">Alternatives for Bad Mods</li><li class="chapter-item expanded "><a href="../bad-mod-alternatives/labymod.html"><strong aria-hidden="true">6.</strong> Labymod</a></li><li class="chapter-item expanded "><a href="../bad-mod-alternatives/sbe.html"><strong aria-hidden="true">7.</strong> SBE</a></li><li class="chapter-item expanded affix "><li class="part-title">Misc</li><li class="chapter-item expanded "><a href="../credits.html"><strong aria-hidden="true">8.</strong> Credits</a></li><li class="chapter-item expanded "><a href="../todo.html"><strong aria-hidden="true">9.</strong> Todo List</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Unofficial Forge User Documentation</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#migrating-from-lunar-client" id="migrating-from-lunar-client">Migrating From Lunar Client</a></h1>
+<h2><a class="header" href="#mods" id="mods">Mods</a></h2>
+<ul>
+<li><strong>1.7 Visuals</strong> - <a href="https://sk1er.club/beta">Sk1er's Old Animations (Beta</a> - Only currently available in Sk1er's Discord) / <a href="https://hypixel.net/threads/forge-1-8-9-damage-tint-v2-0.2008597/">Aycy's Damage Tint</a></li>
+<li><strong>FPS</strong> - <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073">BatHeart's Batty's Coords PLUS</a> / <a href="https://sk1er.club/mods/keystrokesmod">Sk1er's Keystrokes</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog">Aycy's MiniInfo</a></li>
+<li><strong>CPS</strong> - <a href="https://sk1er.club/mods/keystrokesmod">Sk1er's Keystrokes</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a> / <a href="https://ofpyt.weebly.com/189-chroma-cpsmod-20-release.html">Senoe's CPS</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog">Aycy's MiniInfo</a></li>
+<li><strong>Skyblock Addons</strong> (and more) - <a href="https://biscuit.codes/mods/skyblockaddons/downloadversion/?v=latest">Biscuit's SBA</a> &amp; <a href="https://github.com/Moulberry/NotEnoughUpdates/releases/">Moulberry's NEU</a> (join Discord for working version) &amp; <a href="https://github.com/bowser0000/SkyblockMod/">Danker's Skyblock Mod</a> &amp; <a href="https://github.com/Skytils/SkytilsMod/releases/">Sychic &amp; Lily's Skytils</a> &amp; <a href="https://github.com/cow-mc/Cowlection/releases/">Cow's Cowlection</a></li>
+<li><strong>Toggle Sneak/Sprint</strong> - <a href="https://download.powns.dev/togglesneak189">Powns's ToggleSneak</a></li>
+<li><strong>Hypixel Mods</strong> - <a href="https://2pi.pw/mods/autofriend">2Pi's AutoFriend</a> / <a href="https://sk1er.club/mods/autogg">Sk1er's AutoGG &amp; AntiGG</a> / <a href="https://autotip.pro/download">Semx11's AutoTip</a> / <a href="https://www.sk1er.club/mods/level_head">Sk1er's LevelHead</a></li>
+<li><strong>Armor Status</strong> - <a href="https://download.powns.dev/armorhud189">Powns's ArmorHud</a> / <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Key Strokes</strong> - <a href="https://sk1er.club/mods/keystrokesmod">Sk1er's Keystrokes</a></li>
+<li><strong>Coordinates</strong> - <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073">BatHeart's Batty's Coords PLUS</a> / <a href="https://download.powns.dev/coordsmod189">Powns's Coords Hud</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Crosshair</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/2304056">Sparkless's Custom Crosshair</a></li>
+<li><strong>Potion Effects</strong> - <a href="http://www.mediafire.com/file/pas0pju90s98r6o/%255B1.8.9%255D_Powns%2527_PotionEffect_HUD_-_1.0.jar/file">Powns's PotionEffectHud</a> / <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>DirectionHUD</strong> - <a href="https://github.com/ReflxctionDev/bspkrsCore/releases/tag/1.24">Bspkr's DirectionHud</a> (doesn't require bspkrs core) / <a href="https://www.youtube.com/watch?v=Anwxqk2EAlE">Canalex's Compass</a></li>
+<li><strong>Waypoints</strong> - <a href="https://www.youtube.com/watch?v=5jq5tXqwDTM">Aycy's Waypoints</a></li>
+<li><strong>Scoreboard</strong> - <a href="https://www.youtube.com/watch?v=cn9VvT43yRs">Canelex &amp; Powns's Sidebar Mod Revamp</a></li>
+<li><strong>PotionCounter</strong> - <a href="https://www.youtube.com/watch?v=7iYeYK2CGDo">Senoe PotionCounter</a></li>
+<li><strong>Ping</strong> - <a href="https://www.youtube.com/watch?v=NAsefZXZbHQ">Senoe's Ping Display</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog">Aycy's MiniInfo</a></li>
+<li><strong>Freelook</strong> - <a href="https://github.com/DJtheRedstoner/PerspectiveModv4/releases/">DJtheRedstoner's Perspective Mod</a></li>
+<li><strong>Motion Blur</strong> - <a href="https://cdn.discordapp.com/attachments/733903046681034813/806188815286665226/MbMotionblur-1.0-REL-Fixed.jar">Moulberry Motionblur</a> (Must join Sk1er Discord for link to work) / <a href="https://sk1er.club/mods/motionblurmod">Sk1er's Motionblur</a></li>
+<li><strong>Chat</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Scrollable Tooltips</strong> - <a href="https://www.sk1er.club/mods/text_overflow_scroll">Sk1er's Scrollable Tooltips</a></li>
+<li><strong>UHC Overlay</strong> - None (Texturepacks work instead)</li>
+<li><strong>Particle Multiplier</strong> - <a href="https://www.youtube.com/watch?v=Um67Ca7gfn4&amp;t=1s">Dewgs's Particle Mod</a> &amp; <a href="https://youtu.be/0PPR_t-qyfw">Aycy's On Hit Particles</a>  (for sharp/crit) / <a href="https://www.youtube.com/watch?v=UPqOL3WWhaw">Javlin Sharpness Particles</a></li>
+<li><strong>Cooldowns</strong> - <a href="https://www.youtube.com/watch?v=if1t-gO2yfc">Canalex Cooldowns</a></li>
+<li><strong>WorldEdit CUI</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/worldeditcui/files/2352911">Mumfrey WorldEditCUI</a></li>
+<li><strong>Clock</strong> - <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Stopwatch</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073">BatHeart's Batty's Coords PLUS</a></li>
+<li><strong>Memory Usage</strong> - <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Combo Counter</strong> - <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a></li>
+<li><strong>Reach Display</strong> - <a href="https://www.youtube.com/watch?v=myQKoGnCjxY">Dewgs's ReachDisplay</a></li>
+<li><strong>Timechanger</strong> <a href="https://github.com/shatter-point/Revamped-TimeChanger/releases">Shatterpoint's Revamped Timechanger</a></li>
+<li><strong>Server Address</strong> - <a href="https://sk1er.club/mods/ChromaHUD">Sk1er's ChromaHud</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Saturation</strong> - <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Item Physics</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/itemphysic-lite/files/2439695">CreativeMD's ItemPhysic Lite</a></li>
+<li><strong>Item Tracker</strong> - None</li>
+<li><strong>Shiny Pots</strong> - <a href="https://github.com/RoccoDev/ShinyPots-1.8/releases/tag/1.5">RoccoDev's ShinyPots</a></li>
+<li><strong>Block Outline</strong> - <a href="https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/">Aycy's BlockOverlay</a></li>
+<li><strong>Screenshot Uploader</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>FOV Mod</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er Patcher</a></li>
+<li><strong>Auto Text Hot Key</strong> (!!! Bannable on Hypixel !!!) - <a href="https://www.curseforge.com/minecraft/mc-mods/macrokey-keybinding/files/2659839">MattsOnMC's MacroKey Keybinding</a> / <a href="https://5zigreborn.eu/">RoccoDev's 5Zig Reborn</a></li>
+<li><strong>Net Graph</strong> - None</li>
+<li><strong>Mumble Link</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/mumblelink/files/2327154">snipingcoward's Mumble Link</a></li>
+<li><strong>Boss Bar</strong> - <a href="https://sk1er.club/mods/bossbar_customizer">Sk1er's Bossbar Customizer</a></li>
+<li><strong>Team View</strong> - None</li>
+<li><strong>NickHider</strong> -  <a href="https://sk1er.llc/mods/nick_hider">Sk1er's NickHider</a></li>
+<li><strong>Pack Display</strong> - <a href="https://www.youtube.com/watch?v=LeDNOdOdGyk">Canalex's Pack Display</a> / <a href="https://github.com/1fxe/Resource-Pack-Display/releases/tag/1.2">Filip's ResourcePack Display</a></li>
+<li><strong>Day Counter</strong> <a href="https://www.curseforge.com/minecraft/mc-mods/simple-world-timer/files">FoxAhead's Simple World Timer</a> </li>
+<li><strong>Zoom</strong> <a href="https://sk1er.llc/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Menu Blur</strong> <a href="https://www.curseforge.com/minecraft/mc-mods/blur/files/2665186">tterrag's Blur</a></li>
+</ul>
+<h2><a class="header" href="#settings" id="settings">Settings</a></h2>
+<p><em>HUD Options</em></p>
+<ul>
+<li><strong>Shift Effects in Inventory</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Show Achievements</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Show HUD in Friend Menu</strong> - Irrelevant (<a href="https://sk1er.club/modcore">Sk1er's ModCore</a> for Friends Menu)</li>
+<li><strong>Show Crosshair in Third Person</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Show Menu Blur</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/blur/files/2665186">tterrag's Blur</a></li>
+<li><strong>Show HUD in F3</strong> - Irrelevant </li>
+<li><strong>Disable Friend Menu</strong> - Irrelevant (<a href="https://sk1er.club/modcore">Sk1er's ModCore</a> for Friends Menu)</li>
+<li><strong>Use Minecraft GUI Scale</strong> - Irrelevant</li>
+</ul>
+<p><em>Cosmetic Options</em></p>
+<ul>
+<li><strong>Cosmetics</strong> - <a href="https://sk1er.club/modcore">Sk1er's ModCore</a> (Capes Violate EULA and are therefore not included)</li>
+<li><strong>Show Nametag Icon</strong> - Irrelevant</li>
+<li><strong>Third Person Nametag</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Show Tab Icon</strong> - <a href="https://sk1er.club/modcore">Sk1er's ModCore</a></li>
+</ul>
+<p><em>Misc Options</em></p>
+<ul>
+<li><strong>Borderless Fullscreen</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Disable Weather</strong> - <a href="https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar">sp614x's OptiFine</a></li>
+<li><strong>Scroll to Zoom</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+</ul>
+<p><em>Texture Pack Options</em></p>
+<ul>
+<li><strong>Transparent Background</strong> - <a href="https://www.youtube.com/watch?v=OQZFWrrEcYM">Aycy's Resource Pack Manager</a></li>
+<li><strong>Red String</strong> - Texture Pack</li>
+</ul>
+<h2><a class="header" href="#performance" id="performance">Performance</a></h2>
+<p><em>General</em></p>
+<ul>
+<li><strong>Hide Enderportals</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Full Bright</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Show Enchantment Glint</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Lazy Chunk Loading</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a> / <a href="https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar">sp614x's OptiFine</a> (singleplayer only)</li>
+</ul>
+<p><em>Entity Options</em></p>
+<ul>
+<li><strong>Shadow</strong> - <a href="https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar">sp614x's OptiFine</a></li>
+<li><strong>Entities</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Tile Entities</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+</ul>
+<h2><a class="header" href="#other" id="other">Other</a></h2>
+<ul>
+<li><strong>Vanilla Bug Fixes</strong> - <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Custom Main Menu</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/custom-main-menu/files/2280558">Lumien231's Custom Main Menu</a> &amp; <a href="https://www.curseforge.com/minecraft/mc-mods/resource-loader/files/2271089">Lumien231's ResourceLoader</a></li>
+<li><strong>Discord Rich Presence</strong> - <a href="https://hypixel.net/threads/forge-1-8-9-discordrp-rich-presence-for-minecraft-hypixel.1573606/">connorlinfoot's DiscordRP</a></li>
+<li><strong>In Game Account Switcher</strong> - <a href="https://www.curseforge.com/minecraft/mc-mods/in-game-account-switcher/files/2363885">The_Fireplace's InGameAccountSwitcher</a></li>
+<li><strong>In Game Server Switcher</strong> - <a href="https://www.youtube.com/watch?v=04EangMQd7I">Canalex's InGameServerSwitcher</a> / <a href="https://sk1er.club/mods/patcher">Sk1er's Patcher</a></li>
+<li><strong>Save Controls Between Versions</strong> - <a href="https://hypixel.net/threads/forge-1-8-9-controls-saved-%E2%80%93-save-controls-as-presets.2010689/">leduyquang753's Controls Saved</a></li>
+</ul>
+<h2><a class="header" href="#credits" id="credits">Credits</a></h2>
+<ul>
+<li><a href="https://github.com/asbyth">Asbyth</a></li>
+<li><a href="https://github.com/solonovamax">Solonovamax</a></li>
+<li><a href="https://github.com/sirnapkin1334">SirNapkin1334</a></li>
+<li><a href="https://github.com/zoudywastaken">Zoudy</a></li>
+<li><a href="https://github.com/lunanotdev">Luna</a></li>
+<li><a href="https://github.com/karmette">Karmette</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../client-migration/badlion.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../bad-mod-alternatives/labymod.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../client-migration/badlion.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../bad-mod-alternatives/labymod.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
