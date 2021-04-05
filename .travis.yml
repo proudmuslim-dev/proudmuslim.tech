@@ -1,3 +1,4 @@
+# This better work
 language: rust
 sudo: false
 
