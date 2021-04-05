@@ -1,0 +1,407 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction To Forge 1.8.9 - Unofficial Forge User Documentation</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../favicon.png">
+        
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Forge: The Basics</li><li class="chapter-item expanded "><a href="../forge-intro/forge-introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction To Forge 1.8.9</a></li><li class="chapter-item expanded "><a href="../forge-intro/patcher.html"><strong aria-hidden="true">2.</strong> Patcher Explanation and Feature List</a></li><li class="chapter-item expanded affix "><li class="part-title">Migrating From a Client</li><li class="chapter-item expanded "><a href="../client-migration/badlion.html"><strong aria-hidden="true">3.</strong> Migrating From Badlion</a></li><li class="chapter-item expanded "><a href="../client-migration/lunar.html"><strong aria-hidden="true">4.</strong> Migrating From Lunar</a></li><li class="chapter-item expanded affix "><li class="part-title">Alternatives for Bad Mods</li><li class="chapter-item expanded "><a href="../bad-mod-alternatives/labymod.html"><strong aria-hidden="true">5.</strong> Labymod</a></li><li class="chapter-item expanded "><a href="../bad-mod-alternatives/sbe.html"><strong aria-hidden="true">6.</strong> SBE</a></li><li class="chapter-item expanded affix "><li class="part-title">Misc</li><li class="chapter-item expanded "><a href="../credits.html"><strong aria-hidden="true">7.</strong> Credits</a></li><li class="chapter-item expanded "><a href="../todo.html"><strong aria-hidden="true">8.</strong> Todo List</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Unofficial Forge User Documentation</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="initial-setup---forge-189"><a class="header" href="#initial-setup---forge-189">Initial Setup - Forge 1.8.9</a></h1>
+<ul>
+<li><a href="http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.8.9.html" title="Download Forge">Download the latest forge version</a></li>
+<li>Run it to install forge</li>
+</ul>
+<p><img src="https://regex.rest/media/forgefordummies/3.png" alt="3" /></p>
+<ul>
+<li>Open minecraft launcher and check if forge's profile is there, if not then you can create it </li>
+</ul>
+<p><img src="https://user-images.githubusercontent.com/74936369/111808098-b8d7bf00-88e4-11eb-8a2d-60e93b1406a5.png" alt="image" /></p>
+<ul>
+<li>Now that we're done with forge if you're on windows you can press windows+r and type %appdata%/.minecraft/ and if you're on mac do ⌘ (Command) + Space type &quot;~/Library/Application Support/minecraft/&quot; then create a folder called &quot;mods&quot; if it isnt there already.</li>
+<li>Then put the mods you download inside that folder and start minecraft.</li>
+</ul>
+<h2 id="note"><a class="header" href="#note">Note</a></h2>
+<ul>
+<li><strong>Check all the options a mod has!</strong> - Many people randomly turn on all features and then complain to the mod developer saying they don't want that feature on. It is up to the user to look through and test each setting to see what they do instead of bothering the mod developer about it.</li>
+<li><strong>Do not download random mods</strong> - If you want to download mods, whether it be from this list or externally, do some research into what it actually does and if you want it. Many people download old, broken mod folders that cause issues and have a bunch of mods that they aren't even using but are killing their performance. Please only get mods that you know you want and make sure to keep them updated.</li>
+</ul>
+<h2 id="recommended-mods"><a class="header" href="#recommended-mods">Recommended Mods</a></h2>
+<table><thead><tr><th>Name</th><th>Description</th><th>Developer</th></tr></thead><tbody>
+<tr><td><a href="https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar" title="Download Optifine"><strong>OptiFine</strong></a></td><td>General visual and performance enhancing mod.</td><td><a href="https://github.com/sp614x/" title="Sp's Github">sp614x</a></td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Download Patcher"><strong>Patcher</strong></a></td><td>A mod created to improve your all-around Minecraft experience, bringing tons of Quality of Life additions, performance improvements/optimizations, and tons of Vanilla bug fixes.</td><td><a href="https://github.com/Asbyth" title="Their Github">asbyth</a> (<a href="https://github.com/sk1erllc/" title="Sk1erLLC Github">Sk1er LLC</a>)</td></tr>
+<tr><td><a href="https://sk1er.club/beta" title="Download Sk1er's OAM"><strong>Old Animations Mod</strong></a></td><td>Currently in beta and it already has an entire rewrite coming soon, its more accurate than any other OAM and made to be compatible with other mods.</td><td><a href="https://github.com/Llamalad7" title="Their Github">Llamalad7</a>, <a href="https://moulberry.codes" title="Moul's Website">Moulberry</a> (<a href="https://github.com/sk1erllc/" title="Sk1erLLC Github">Sk1er LLC</a>)</td></tr>
+<tr><td><a href="https://download.powns.dev/togglesneak189" title="Download Togglesprint"><strong>Powns Togglesprint</strong></a> <a href="https://github.com/My-Name-Is-Jeff/SimpleToggleSprint" title="Download Togglesprint"><strong>SimpleTogglesprint</strong></a></td><td>Adds a sprint and sneak toggle similar to that in Minecraft 1.15 and above, but does not allow for sneaking in inventories in order to be 1.8 compliant.</td><td><a href="https://github.com/pownsgg" title="Powns' Github">Powns</a>, <a href="https://github.com/My-Name-Is-Jeff/" title="Lily's Github">Lily</a></td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=OQZFWrrEcYM" title="Download Rpm"><strong>Resourcepack Manager</strong></a></td><td>Manage your resource packs with ease.</td><td><a href="https://www.youtube.com/channel/UCvAKYshTxWO7ougF4z2U2-A" title="Aycy's Channel">Aycy</a></td></tr>
+<tr><td><a href="https://github.com/cow-mc/Cowlection/releases" title="Download Cowlection"><strong>Cowlection</strong></a></td><td>A client-side only Forge mod that contains a collection of features (mainly for skyblock but otherwise its a good mod)..</td><td><a href="https://github.com/cow-mc" title="Cow's Github">Cow</a></td></tr>
+<tr><td><a href="https://sk1er.club/mods/text_overflow_scroll" title="Download Scrollable Tooltips"><strong>Scrollable Tooltips</strong></a></td><td>Scrollable tooltips allows you to scroll up/down (mouse wheel) or left/right (mouse wheel + shift) when an item's tooltip is too long for the screen.</td><td><a href="https://github.com/sk1er/" title="Sk1er's Github">Sk1er</a> (<a href="https://github.com/sk1erllc/" title="Sk1erLLC Github">Sk1er LLC</a>)</td></tr>
+<tr><td><a href="https://github.com/dreamhopping/AudioSwitcher/releases/tag/1.0.0" title="Download IADS"><strong>Ingame Audio Device Switcher</strong></a></td><td>A mod for 1.8.9 and 1.12.2 that lets you choose your sound output device, without having to restart your game!</td><td><a href="https://github.com/dreamhopping/" title="Their Github">Dreamhopping</a></td></tr>
+</tbody></table>
+<table><thead><tr><th>More</th></tr></thead><tbody>
+<tr><td>And you can always check <a href="https://sk1er.llc" title="Sk1er's Website"><strong>sk1er.club</strong></a> for the latest Sk1er LLC/partners mods.</td></tr>
+</tbody></table>
+<h2 id="mods-that-you-may-have-not-heard-of"><a class="header" href="#mods-that-you-may-have-not-heard-of">Mods that you may have not heard of</a></h2>
+<table><thead><tr><th>Mod</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://hypixel.net/threads/forge-1-8-9-timechanger-2-2-1-an-improved-timechanger-mod.3574261/" title="Download Timechanger"><strong>Revamped Timechanger</strong></a></td><td>A mod for changing time client</td></tr>
+<tr><td><a href="https://chattriggers.com/" title="Download CT"><strong>ChatTriggers</strong></a></td><td>ChatTriggers is a framework for Minecraft that allows for live scripting and client modification using JavaScript. In other words, it's a mod that allows you to use javascript for stuff, and has tons of useful modules on their website. Please download the latest stable 1.3.1 release.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=9OwPMxBzQog" title="Download MiniInfo"><strong>MiniInfo</strong></a></td><td>Simple mod to display FPS, CPS, and ping by Aycy.</td></tr>
+<tr><td><a href="https://github.com/1fxe/Resource-Pack-Display/releases/" title="Download RPD"><strong>ResourcePackDisplay</strong></a></td><td>(Not to be confused with Resourcepack Manager) Display current pack, the mod also has the /rpd random command to randomly choose a pack from your packs folder with detection for incompatible and duplicate packs.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=0PPR_t-qyfw" title="Download OHP"><strong>OnHitParticles</strong></a></td><td>A mod to change what particles are shown when you hit someone with great customizability by Aycy.</td></tr>
+<tr><td><a href="https://hypixel.net/threads/forge-1-8-9-damage-tint-v2-0.2008597/" title="Download Damage Tint"><strong>Damage Tint</strong></a></td><td>A mod change the damage tint when you hit someone by Aycy.</td></tr>
+<tr><td><a href="https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/" title="Download Block Overlay"><strong>Block Overlay</strong></a></td><td>A mod to change the block outline when you hover over blocks with complete customizability over the outline and a very nice unique GUI with live preview. Most people use the old powns continuation of the mod but the original mod has been updated.</td></tr>
+<tr><td><a href="https://github.com/DJtheRedstoner/PerspectiveModv4" title="Download Perspectivemod"><strong>DJPerspectiveMod</strong></a></td><td>A remake of canalex's perspective mod with bugfixes.</td></tr>
+<tr><td><a href="https://hypixel.net/threads/forge-quickplay-v2-0-4-quickly-join-games-on-the-network.1317410/" title="Download Quickplay"><strong>Quickplay</strong></a></td><td>A mod to quickly join hypixel games &amp; sort them to keybinds.</td></tr>
+<tr><td><a href="https://www.curseforge.com/minecraft/mc-mods/reauth/download/2433385" title="Download ReAuth"><strong>ReAuth</strong></a></td><td>Fixes the problem of having to restart your client when your session is invalid &amp; more.</td></tr>
+<tr><td><a href="https://github.com/Vonr/LinuxLWJGLKeyFix" title="Download KeyFix"><strong>LinuxLWJGLKeyFix</strong></a></td><td>Fixes a LWJGL bug causing incorrect registration of Shift+2 and Shift+6 on Linux systems.</td></tr>
+<tr><td><a href="https://www.curseforge.com/minecraft/mc-mods/controlling/files/3071182" title="Download Controlling"><strong>Controlling</strong></a></td><td>Gives the controls menu a new UI allowing for easier editing and viewing.</td></tr>
+<tr><td><a href="https://www.curseforge.com/minecraft/mc-mods/smooth-scrolling-everywhere/files/2895468" title="Download SSE"><strong>Smooth Scrolling Everywhere</strong></a></td><td>Makes scrolling in menus much smoother and much less clunky.</td></tr>
+<tr><td><a href="https://sk1er.club/mods/popup_events" title="Download Popup events"><strong>Popup Events</strong></a></td><td>Allows for accepting or denying requests on Hypixel much more easily.</td></tr>
+<tr><td><a href="https://github.com/dreamhopping/BetterPacksGUI/releases/tag/1.0.0" title="Download BPG"><strong>BetterPacksGUI</strong></a></td><td>A mod for 1.8.9 that automatically reloads the texture pack list when you add a new texture pack &amp; allows you to delete/move packs once they are not selected.</td></tr>
+<tr><td><a href="https://www.curseforge.com/minecraft/mc-mods/better-chat/files/3249065" title="Download BetterChat"><strong>BetterChat</strong></a></td><td>An overall awesome chat mod that lets you add smooth animations for messages and repositoning chat very easily as well as changing chat width and width and maybe more!</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=i8ZgEzpqdAM" title="Download Custom sky mod"><strong>Custom Sky mod</strong></a></td><td>Allows you to easily change your custom sky within a GUI</td></tr>
+</tbody></table>
+<h2 id="mods-you-should-avoid---alternatives"><a class="header" href="#mods-you-should-avoid---alternatives">Mods you should avoid - Alternatives</a></h2>
+<table><thead><tr><th>Mod</th><th>Reason</th></tr></thead><tbody>
+<tr><td><a href="https://github.com/MicrocontrollersDev/LabyMod-Alternatives" title="Alternative"><strong>LabyMod</strong></a></td><td>LabyMod causes a ton of incompatibilities with other mods because the devs love overwriting stuff for no reason like the entirety of the tab and stealing features and it is not recommended.</td></tr>
+<tr><td><a href="https://github.com/MicrocontrollersDev/Skyblock-Extras-Alternatives" title="Alternative"><strong>SkyblockExtras</strong></a></td><td>SBE is heavily obfuscated, making it incompatible with many mods, is paid and therefore violates <a href="https://account.mojang.com/documents/minecraft_eula">Mojang's EULA</a>, and has a ton of problems causing crashes and visual glitches, and the developer steals stuff and is an all around terrible person pepelaugh.</td></tr>
+<tr><td><strong>SkyblockCatia</strong></td><td>Causes a ton of incompatibilities, see <a href="https://github.com/MicrocontrollersDev/Skyblock-Extras-Alternatives" title="Alternative">SBE alternatives</a>.</td></tr>
+<tr><td><strong>Skypixel</strong></td><td>Unmaintaned and no longer works for Skyblock, see <a href="https://github.com/MicrocontrollersDev/Skyblock-Extras-Alternatives" title="Alternative">SBE alternatives</a>.</td></tr>
+<tr><td><a href="https://sk1er.club/beta" title="Alternative"><strong>SpiderFrog's OAM</strong></a></td><td>has over 7mb of bloat and causes crashes. Instead you can use <a href="https://sk1er.club/beta" title="Alternative"><strong>Sk1er's OAM</strong></a> which is currently in beta.</td></tr>
+<tr><td><a href="https://sk1er.club/beta" title="Alternative"><strong>Orange Marshall's OAM</strong></a></td><td>doesnt look like 1.7, missing animations like old sneaking animation, overwrites many things unnecessarily causing other mods to break, like OptiFine's custom item texture. Instead you can use <a href="https://sk1er.club/beta" title="Alternative"><strong>Sk1er's OAM</strong></a> which is currently in beta.</td></tr>
+<tr><td><strong>PlayerAPI</strong></td><td>This used to be a requirement for most togglesneaks but fortunately enough developers now know how access transformers actually work and aren't lazy.</td></tr>
+<tr><td><a href="https://www.youtube.com/watch?v=OQZFWrrEcYM" title="Alternative"><strong>ResourcePack Organizer</strong></a> by Chylex</td><td>overwrites the custom sky for some bizarre reason lmao and he has no plans to update old versions. Instead you can use <a href="https://www.youtube.com/watch?v=OQZFWrrEcYM" title="Alternative">Resourcepack Manager</a> by Aycy.</td></tr>
+<tr><td><strong>Modcore Container</strong></td><td>was used to allow players to try out <a href="https://sk1er.club/modcore">Modcore</a> before it was a thing, but now modcore is auto installed with all <a href="https://sk1er.club/" title="Sk1er's Website">Sk1er Mods</a>/Partnered developer's mods and in any mod that contains it.</td></tr>
+<tr><td><strong>BetterFPS</strong></td><td>Useless and can cause a LOT of issues, <a href="https://twitter.com/asbythh/status/1260072556989644800?s=20" title="BetterFPS 'optimizations' test">example1</a>, <a href="https://streamable.com/rthpah" title="BetterFPS 'optimizations' test">example2</a>, <a href="https://streamable.com/bmnum3" title="BetterFPS 'optimizations' test">example3</a>, as changing the base math the game depends on is a VERY bad idea, fast beacon and fast hopper are server side features so they are also useless, horrible mod overall.</td></tr>
+<tr><td><strong>TexFix</strong></td><td>Useless unless you have a big modpack (50 or more mods) and can barely lower memory usage. contrary to popular belief, this mod CANNOT improve fps as for obvious reasons. It can also make textures become 2D.</td></tr>
+<tr><td><strong>FoamFix</strong></td><td>The 1.8.9 version is a useless and hacky mod. However, the 1.12.2 version is fine.</td></tr>
+<tr><td><strong>1.8.9 TcpNoDelay</strong></td><td>Useless as 1.8.1 and above already has this enabled. This mod will only work on 1.8.0 and below.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>Vanilla Enhancements</strong></a></td><td>Overwrites many things unnecessarily causing other mods to break, like overwriting chat and having a bannable feature, unmaintained, abandoned which is why some features are broken and not getting fixed. Instead <a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> takes some of its best features and fixes them.</td></tr>
+<tr><td><strong>Inventory and Mouse Tweaks</strong></td><td>Many players get these mods to help sort their inventories in Skyblock, however they are both bannable and are not advised.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>MouseDelayFix</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>MouseBindFix</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>CaseCommands</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>CommandPatcher</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>CompactChat</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> has a new improved rewrite of it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>CrossChat</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>Frames+</strong></a></td><td>Horrible mod that used to break performance but had some nice features which <a href="https://sk1er.llc/mods/patcher" title="Download Patcher">Patcher</a> now takes continuation of &amp; improves upon.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>ItemOptimizations</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a>) already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>ResourceExploitFix</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already has a better improved version of it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>WindowedFullscreen</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>CleanView</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>FastChat</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>MemoryFix</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it and improves upon some of its features.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>NoCloseMyChat</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>VoidChat</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://sk1er.llc/mods/patcher" title="Alternative"><strong>Fullbright</strong></a></td><td><a href="https://sk1er.llc/mods/patcher" title="Alternative">Patcher</a> already replaces it.</td></tr>
+<tr><td><a href="https://download.powns.dev/togglesneak189" title="Alternative"><strong>Xander's Togglesprint</strong></a></td><td>developer is known for making bannable mods and i wouldnt recommend any of his other stuff as his reputation is ruined, the togglesprint had the cheat KeepSprint.</td></tr>
+</tbody></table>
+<h2 id="features-you-might-be-looking-for---mods"><a class="header" href="#features-you-might-be-looking-for---mods">Features you might be looking for - Mods</a></h2>
+<table><thead><tr><th>Feature</th><th>Mod</th></tr></thead><tbody>
+<tr><td><strong>Armor Status</strong></td><td><a href="https://download.powns.dev/armorhud189" title="Download Armorhud">Powns's ArmorHud</a> / <a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromahud (dont)">Sk1er's ChromaHud</a></td></tr>
+<tr><td><strong>AutoGG</strong></td><td><a href="https://sk1er.club/mods/autogg" title="Download Autogg">Sk1er's AutoGG</a></td></tr>
+<tr><td><strong>Autotext</strong> (Bannable on Hypixel)</td><td><a href="https://www.curseforge.com/minecraft/mc-mods/macrokey-keybinding/files/2659839" title="Download MacroKey">MattsOnMC's MacroKey Keybinding</a></td></tr>
+<tr><td><strong>AutoTip</strong></td><td><a href="https://autotip.pro" title="Download Autotip">Semx11 AutoTip</a></td></tr>
+<tr><td><strong>Bossbar</strong></td><td><a href="https://sk1er.club/mods/bossbar_customizer" title="Download BossBar Customizer">Sk1er's Bossbar Customizer</a></td></tr>
+<tr><td><strong>CPS Counter/Keystrokes</strong></td><td><a href="https://sk1er.club/mods/keystrokesmod" title="Download Keystrokes">Sk1er's Keystrokes</a> / <a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromahud (dont)">Sk1er's ChromaHud</a> / <a href="https://ofpyt.weebly.com/189-chroma-cpsmod-20-release.html" title="Download CPSMod">Senoe</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog" title="Download MiniInfo">Aycy's MiniInfo</a></td></tr>
+<tr><td><strong>Clear Chat</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Combo Counter</strong></td><td><a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromahud (bad)">Sk1er's ChromaHud</a></td></tr>
+<tr><td><strong>Coordinates</strong></td><td><a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromahud (pls no)">Sk1er's ChromaHud</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073" title="Download Batty's coords mod">BatHeart Batty's Coords PLUS</a> / <a href="https://download.powns.dev/coordsmod189" title="Download CoordsMod">Powns's  Coords Hud</a></td></tr>
+<tr><td><strong>Crosshair Mod</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/3164058" title="Download CC">Sparkless's Custom Crosshair</a></td></tr>
+<tr><td><strong>Direction Mod</strong></td><td><a href="https://sk1er.club/mods/ChromaHUD" title="Download ChromaShit">Sk1er's ChromaHud</a></td></tr>
+<tr><td><strong>Enchant Glint</strong></td><td><a href="https://download.powns.dev/glintcolorizer189" title="Download Glint coloriszer">Powns's Glint Colorizer</a></td></tr>
+<tr><td><strong>FOV Changer</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher (/fov)</a></td></tr>
+<tr><td><strong>FPS Counter</strong></td><td><a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromahud (stop!)">Sk1er's ChromaHud</a> / <a href="https://sk1er.club/mods/keystrokesmod" title="Download Keystrokes">Sk1er's Keystrokes</a> / <a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073" title="Download Batty's coords mod">BatHeart Batty's Coords PLUS</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog" title="Download MiniInfo">Aycy's MiniInfo</a></td></tr>
+<tr><td><strong>Fullbright</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Ghost Liquid Fix</strong></td><td><a href="https://download.powns.dev/lavafix189" title="Download Powns' Lava Fix">Powns's Lava Fix</a></td></tr>
+<tr><td><strong>Hit Color</strong></td><td><a href="https://www.youtube.com/watch?v=ZK1C8iThJAA" title="Download Damage Tint">Aycy's Damage Tint</a></td></tr>
+<tr><td><strong>Hitboxes</strong></td><td>F3 + B / <a href="https://sk1er.club/beta" title="Download Sk1er's OAM">Sk1er's Old Animations</a> (adds back 1.7 style hitboxes) / <a href="http://www.mediafire.com/file/rci3i8m09yoek7u/HitboxColors-v1.0.jar" title="Download HitBox Colo(u)r's">Aycy HitboxColors</a></td></tr>
+<tr><td><strong>Inventory Blur</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/blur/files/2665186" title="Download tterrag's blur">tterrag's  Blur</a></td></tr>
+<tr><td><strong>Ingame Server Switcher</strong></td><td><a href="https://www.youtube.com/watch?v=04EangMQd7I" title="Download ISS">Canalex's</a> / <a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's  Patcher</a> (currently logs you out)</td></tr>
+<tr><td><strong>Item Counter</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Item Info</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Item Physics</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/itemphysic-lite/files/2439695" title="Download ItemPhysics">CreativeMD's ItemPhysic Lite</a></td></tr>
+<tr><td><strong>JustEnoughItems</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/jei/files/2431977" title="Download JEI">Mezz's JEI</a></td></tr>
+<tr><td><strong>Keystrokes Mod</strong></td><td><a href="https://sk1er.club/mods/keystrokesmod" title="Download Keystrokes">Sk1er's Keystrokes</a></td></tr>
+<tr><td><strong>Levelhead</strong></td><td><a href="https://sk1er.club/mods/level_head" title="Download Levelhead">Sk1er's Levelhead</a></td></tr>
+<tr><td><strong>MiniMap</strong> (!!! Bannable on Hypixel !!!)</td><td><a href="https://www.curseforge.com/minecraft/mc-mods/voxelmap/files/2460202" title="Download VoxelMap">MamiyaOtaru's VoxelMap</a> (requires <a href="http://www.liteloader.com/download#snapshot_1890" title="Download LiteLoader">LiteLoader</a>) / <a href="https://www.curseforge.com/minecraft/mc-mods/journeymap/files/2311867" title="Download Journey Map">Techbrew &amp; Mysticdrew's JourneyMap</a> / <a href="https://github.com/pownsgg/MiniMap" title="Download MiniMap">Powns's Simple MiniMap</a></td></tr>
+<tr><td><strong>Motion Blur</strong></td><td><a href="https://sk1er.club/mods/motionblurmod" title="Download Motionblur">Sk1er's Motionblur</a></td></tr>
+<tr><td><strong>Nick Hider</strong></td><td><a href="https://www.sk1er.club/mods/nick_hider" title="Download NickHider">Sk1er's NickHider</a></td></tr>
+<tr><td><strong>Pack Display</strong></td><td><a href="https://github.com/1fxe/Resource-Pack-Display/releases/tag/1.2" title="Download RPD">Filip's ResourcePack Display</a> / <a href="https://www.youtube.com/watch?v=LeDNOdOdGyk" title="Download RPD">Canalex's Pack Display</a></td></tr>
+<tr><td><strong>Particle Mod</strong></td><td><a href="https://www.youtube.com/watch?v=Um67Ca7gfn4&amp;t=1s" title="Download ParticleMod">Dewgs's ParticleMod</a> / <a href="https://www.youtube.com/watch?v=0PPR_t-qyfw" title="Download OnHitParticles">Ayct's OnHitParticles</a></td></tr>
+<tr><td><strong>Ping HUD</strong></td><td><a href="https://www.youtube.com/watch?v=NAsefZXZbHQ" title="Download PingHUD">Senoe's Port</a> / <a href="https://www.youtube.com/watch?v=9OwPMxBzQog" title="Download MiniInfo">Aycy's MiniInfo</a></td></tr>
+<tr><td><strong>Potion Status</strong></td><td><a href="https://download.powns.dev/potionhud189" title="Download Potionhud">Powns's PotionHud</a> / <a href="https://sk1er.club/mods/ChromaHUD" title="Download Chromafuck">Sk1er's ChromaHud</a></td></tr>
+<tr><td><strong>Reach Display</strong></td><td><a href="https://www.youtube.com/watch?v=myQKoGnCjxY" title="Download ReachDisplay">Dewgs's ReachDisplay</a></td></tr>
+<tr><td><strong>ResourcePack</strong></td><td><a href="https://www.youtube.com/watch?v=OQZFWrrEcYM" title="Download RPM">Aycy's Resource Pack Manager</a></td></tr>
+<tr><td><strong>Saturation</strong></td><td><a href="https://5zigreborn.eu/" title="Download 5shit">RoccoDev's  5Zig Reborn</a></td></tr>
+<tr><td><strong>Scoreboard</strong></td><td><a href="https://www.youtube.com/watch?v=cn9VvT43yRs" title="Download SideBarMod">Canelex &amp; Powns Sidebar Mod Revamp</a></td></tr>
+<tr><td><strong>Server Address HUD</strong></td><td><a href="https://sk1er.club/mods/ChromaHUD" title="Download ChromaDuck">Sk1er's ChromaHud</a></td></tr>
+<tr><td><strong>ShinyPots</strong></td><td><a href="https://github.com/RoccoDev/ShinyPots-1.8/releases/tag/1.5" title="Download ShinyPots">RoccoDev's ShinyPots</a></td></tr>
+<tr><td><strong>Stopwatch</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073" title="Download Batty's Coords mod">BatHeart Batty's Coords PLUS</a></td></tr>
+<tr><td><strong>Toggle Sneak</strong></td><td><a href="https://download.powns.dev/togglesneak189" title="Download Togglesneak">Powns's ToggleSneak</a> / <a href="https://github.com/My-Name-Is-Jeff/SimpleToggleSprint" title="Download ToggleSneak">SimpleTogglesprint</a></td></tr>
+<tr><td><strong>Toggle Sprint</strong></td><td><a href="https://download.powns.dev/togglesneak189" title="Download Togglesprint">Powns's ToggleSneak</a> / <a href="https://github.com/My-Name-Is-Jeff/SimpleToggleSprint" title="Download Togglesprint">SimpleTogglesprint</a></td></tr>
+<tr><td><strong>Waypoints</strong></td><td><a href="https://www.youtube.com/watch?v=5jq5tXqwDTM" title="Download Waypoints">Aycy's Waypoints</a></td></tr>
+<tr><td><strong>Zoom</strong></td><td><a href="https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar" title="Download Optifine">Sp614x Optifine</a> / <a href="https://sk1er.llc/mods/patcher" title="Download Patcher">Sk1er's Patcher</a> (tweaks Optifine's)</td></tr>
+<tr><td><strong>Compact Chat</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Text Shadow</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>24 Hour Timestamps</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Fancy Fonts</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/smooth-font/files/2568612" title="Download SmoothFont">bre2el's SmoothFont</a></td></tr>
+<tr><td><strong>Timestamps</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Chat Messages Notifications</strong></td><td><a href="https://5zigreborn.eu/" title="Download 5zig">RoccoDev's 5Zig Reborn</a></td></tr>
+<tr><td><strong>Chat Opacity</strong></td><td><a href="https://sk1er.club/mods/patcher" title="Download Patcher">Sk1er's Patcher</a></td></tr>
+<tr><td><strong>Chat Size</strong></td><td><a href="https://discord.gg/moulberry" title="Moulberry's Discord">Moulberry's Hychat</a></td></tr>
+<tr><td><strong>Replay Mod</strong></td><td><a href="https://www.replaymod.com/download/" title="Download ReplayMod">CrushedPixel &amp; johni0702's Replay Mod</a></td></tr>
+<tr><td><strong>Schematica Mod</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/schematica/files/2279147" title="Download Schematica">Lunatrius's Schematica</a></td></tr>
+<tr><td><strong>TeamSpeak Mod</strong></td><td><a href="https://5zigreborn.eu/" title="Download 5Zig">RoccoDev's 5Zig Reborn</a></td></tr>
+<tr><td><strong>MumbleLink</strong></td><td><a href="https://www.curseforge.com/minecraft/mc-mods/mumblelink/files/2327154" title="Download Mumblelink">snipingcoward's MumbleLink</a></td></tr>
+</tbody></table>
+<h2 id="recommended-skyblock-mods"><a class="header" href="#recommended-skyblock-mods">Recommended Skyblock Mods</a></h2>
+<table><thead><tr><th>Mod</th><th>Description</th></tr></thead><tbody>
+<tr><td><a href="https://biscuit.codes/mods/skyblockaddons/downloadversion/?v=latest" title="Download SBA"><strong>Biscuit's SkyblockAddons</strong></a></td><td>A mod with a bunch of QOL features for Skyblock. Version 1.6 is currently in development that will add more modern features.</td></tr>
+<tr><td><a href="https://github.com/Moulberry/NotEnoughUpdates/releases" title="Download NEU"><strong>Moulberry's NotEnoughUpdates</strong></a></td><td>This mod provides even more customization than SBA does and improves gameplay significantly. Version 2.0 is currently in development and can be downloaded on their <a href="https://discord.gg/moulberry" title="Moulberry's Discord">discord</a> which adds many more features such as experimentation table solvers and fairy soul finder.</td></tr>
+<tr><td><a href="https://github.com/Skytils/SkytilsMod/releases/" title="Download Skytils"><strong>Sychic &amp; Lily's Skytils</strong></a></td><td>This mod provides many QOL features, along with dungeon specific features such as solvers, and waypoints for diana's burrows and relics.</td></tr>
+<tr><td><a href="https://github.com/bowser0000/SkyblockMod/" title="Download DSM"><strong>Danker's Skyblock Mod</strong></a></td><td>Provides some dungeon solvers that Skytils is missing as well as some other minor game improvements.</td></tr>
+<tr><td><a href="https://github.com/cow-mc/Cowlection/releases/" title="Download Cowlections"><strong>Cow's Cowlection</strong></a></td><td>Mainly known for its dungeon party finder helper, this mod adds more miscelaneous features.</td></tr>
+<tr><td><a href="https://github.com/DJtheRedstoner/YetAnotherSkyblockMod/releases/tag/v1.3" title="Download YASM"><strong>DJtheRedstoner's YetAnotherSkyblockMod</strong></a></td><td>Allows for toggling certain features of other mods while in skyblock to remove unnecessary clutter.</td></tr>
+</tbody></table>
+<h2 id="common-crashes-wip"><a class="header" href="#common-crashes-wip">Common Crashes [WIP]</a></h2>
+<table><thead><tr><th>Issue</th><th>Explanation</th></tr></thead><tbody>
+<tr><td><strong>Connected textures</strong></td><td>OptiFine 1.8.9 currently has an issue with connected textures causing crashes. Only &quot;Fancy&quot; is effected, so use &quot;Fast&quot; instead.</td></tr>
+<tr><td><strong>5Zig</strong></td><td>The old 5Zig can cause a lot of issues due to it no longer being maintained. It is recommended that you switch to <a href="https://5zigreborn.eu/" title="Alternative">RoccoDev's 5Zig Reborn</a> instead.</td></tr>
+<tr><td><strong>Having ModCore in your mods folder</strong></td><td>Please refrain from putting ModCore in your mods folder as it can cause crashes, it is not the actual way to install ModCore and might cause issues, if you have a <a href="https://sk1er.llc" title="Sk1er's Website">Sk1er LLC</a> mod(s)/partnered mod(s) you shouldnt worry about the installation of ModCore as it installs itself</td></tr>
+<tr><td><strong>Config corruption</strong></td><td>On the off-chance that one of your config files become corrupted, simply delete the config and relaunch Minecraft. A new, working config file will be created.</td></tr>
+<tr><td><strong>Incompatible mods</strong></td><td>Some mods may be incompatible with each other. These are usually the result of one (or both) of the mods being poorly made. Please check if there are better alternatives.</td></tr>
+<tr><td><strong>Using same features with different mods</strong></td><td>as a result of lazy developers some mods might overwrite entire classes and if two mods overwrite one class it'll  crash and for example having two old animations mods is useless and will cause issues with the game.</td></tr>
+</tbody></table>
+<h2 id="ways-to-prevent-crashing-wip"><a class="header" href="#ways-to-prevent-crashing-wip">Ways to Prevent Crashing [WIP]</a></h2>
+<table><thead><tr><th>Issue</th><th>Explanation</th></tr></thead><tbody>
+<tr><td><strong>Update your mods</strong></td><td>Always keep your mods up to date! It is important to always keep your mods to the latest so that you always have the latest fixes.</td></tr>
+<tr><td><strong>Don't download a mods folder</strong></td><td>While there is nothing wrong with downloading the mods folder, it is wrong to just blindly use them. First you should check which of the mods in the folder you actually want/need, and then make sure that they are updated to the latest version.</td></tr>
+<tr><td><strong>Don't use bad mods</strong></td><td>Some examples of bad mods are Labymod, Spiderfrog's OAM, Orange Marshall mods, FoamFix, TexFix, Vanilla Enahncements and BetterFps. There are many mods that are poorly made and have better alternatives, and so it is best to avoid them.</td></tr>
+<tr><td><strong>Check what you use</strong></td><td>In some cases people use mods they dont really need whether it be from sketchy mod creators or mods from a youtuber's mods folder which you shouldnt get in the first place, for example shady skyblock mods they downloaded from the hypixel forums that they dont know what the use for them is and sometimes its plain malware so check what you download and becareful since those mods might be the ones crashing your game or potentially stealing your personal information.</td></tr>
+</tbody></table>
+<h2 id="credits"><a class="header" href="#credits">Credits</a></h2>
+<p>Huge credits to:</p>
+<table><thead><tr><th><img src="https://cdn.discordapp.com/avatars/202666531111436288/785002e674a3cb212ac5033e15275fe2.png?size=1024" width="100px;" />  <br> <a href="https://regex.rest/">Regex</a></th><th><img src="https://avatars.githubusercontent.com/u/66657148?v=4" width="100px;" />  <br> <a href="https://github.com/MicrocontrollersDev/">Microcontrollers</a></th><th><img src="https://avatars.githubusercontent.com/u/45434286?v=4" width="100px;" />  <br>  <a href="https://github.com/SystemlessDev/">Systemless</a></th><th><img src="https://avatars.githubusercontent.com/u/69869443?v=4" width="100px;" /> <br>  <a href="https://github.com/proudmuslim-dev">Proudmuslim</a></th><th><img src="https://avatars.githubusercontent.com/u/36578995?v=4" width="100px;" /> <br> <a href="https://github.com/asbyth/">asbyth</a></th></tr></thead><tbody>
+</tbody></table>
+<h2 id="monkey"><a class="header" href="#monkey">Monkey</a></h2>
+<ul>
+<li><a href="https://hypixel.net/threads/3731617" title="Download SkyClient">SkyClient</a> installs all the good Hypixel Skyblock mods for you</li>
+<li>Modcore 2.0 leaked installer, extremely small because of the new optimizations put in to actually download the files necessary which is simple <a href="https://www.mediafire.com/file/w1zd9z4e7u9cm1q/Modcore+installer+2.0+beta+3+LEAK.jar/file" title="Download Modcore 2.0">Mediafire link</a></li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+                            <a rel="next" href="../forge-intro/patcher.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+                    <a rel="next" href="../forge-intro/patcher.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
