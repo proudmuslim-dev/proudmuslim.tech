@@ -9,7 +9,7 @@
 | [**Cowlection**](https://github.com/cow-mc/Cowlection/releases) | Has some miniscule features, but they're cool nonetheless: [**List of features**]( https://github.com/cow-mc/Cowlection/blob/master/README.md) | [Cow](https://github.com/cow-mc/) |
 | [**Danker's Skyblock Mod**](https://github.com/bowser0000/SkyblockMod/releases) | [**List of features**](https://github.com/bowser0000/SkyblockMod/blob/development/README.md) | [Danker](https://github.com/bowser0000) |
 
-Note: It is not recommended that you use SkyblockCatia either since that mod has a bunch of incompatibilities with other mods and has a bunch of features that aren't even for skyblock, making it a very bloaty mod.
+Note: It is not recommended that you use SkyblockCatia either since that mod has a bunch of incompatibilities with other mods and has a bunch of features that aren't even for skyblock, making it a very bloated mod.
 
 # Reasons NOT to Buy SBE:
 - [**Poor puzzle solvers**](https://i.imgur.com/zXydj0j.png)
