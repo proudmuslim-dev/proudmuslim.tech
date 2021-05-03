@@ -30,7 +30,7 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
 - [**Blatantly steals from NEU**](https://i.imgur.com/nNJp8bD.png)
     - Context: NEU had originally made a feature that allowed you to retexture skulls with custom models. On the SBE discord, they had specifically stated that they will not be stealing features from other mods and people should not request them to add stolen features. At the time Moulberry was pretty annoyed at SBE for blatantly stealing features and was saying on stream he was going to add dungeon puzzle solvers to make SBE useless which was when they put out that statement, but when Moulberry decided against dungeon puzzle solvers, they went straight back to stealing.
 - **Blatantly steals from Skytils**
-    - Added necron phase timers literally the day after Skytils. Complex also admitted to stalking the Skytils github.
+    - Added necron phase timers literally the day after Skytils. Complex also admitted to stalking the Skytils [github repository](https://github.com/Skytils/SkytilsMod).
 - [**Breaks MC EULA**](https://i.imgur.com/SyNXc9W.png)
     - Mojang can take down the mod at any time and you'd lose $5. And no, calling it a "donation to Complex" doesn't change anything in the eyes of the law. The mod is advertised as paid, and is unlocked with money.
 - [**Performance issues**](https://i.imgur.com/8sYs8bg.png), and [**even more performance issues**](https://i.imgur.com/bxJyO2X.png)
