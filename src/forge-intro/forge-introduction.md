@@ -1,9 +1,13 @@
 # Initial Setup - Forge 1.8.9
 
 - [Download the latest forge version](http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.8.9.html "Download Forge")
-- Run it to install forge  
+- Run it to install forge.
 
-![3](https://regex.rest/media/forgefordummies/3.png)
+<div align = "center">
+
+![3](https://raw.githubusercontent.com/proudmuslim-dev/proudmuslim.tech/main/.github/images/installer.png)
+
+</div>
 
 - Open minecraft launcher and check if forge's profile is there, if not then you can create it 
 
