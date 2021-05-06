@@ -12,6 +12,7 @@
 # Migrating From a Client 
 - [Migrating From Badlion](./client-migration/badlion.md)
 - [Migrating From Lunar](./client-migration/lunar.md)
+- [Migrating From Hyperium](./client-migration/hyperium.md)
 
 # Alternatives for Bad Mods 
 

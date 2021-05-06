@@ -9,7 +9,8 @@
 
 Shoutout to these cool people
 
-- [Luna](https://github.com/LunaNotdev)
 - [Microcontrollers](https://github.com/MicrocontrollersDev/)
+- [Luna](https://github.com/LunaNotdev)
+- [Asbyth](https://github.com/asbyth/)
 
 For a more detailed account of what they did, take a look at the [credits page](credits.md).

@@ -1,4 +1,3 @@
 # Todo List
 
-- Check grammar on all documents.
-- Organize the client migration lists.
+- If you're interested in contributing, please check out our [todo list](https://github.com/proudmuslim-dev/proudmuslim.tech/issues/3).
