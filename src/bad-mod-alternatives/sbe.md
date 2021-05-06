@@ -21,6 +21,7 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
     - Context: This means we cant read the code unless we spend hours decrpyting it. This makes the mod very unsafe as it could be doing anything behind the user's back. It also spams the user's logs and is used to hide stolen code.
 - [**Compatibility issues**](https://i.imgur.com/RA2gUpf.png)
 - **Use pirated software to protect against piracy**
+    - If that was a little confusing, the obfuscator used by SBE is pirated.
 - [**Spams your logs v1**](https://i.imgur.com/1jRDyni.png)
 - [**Spams your logs v2**](https://i.imgur.com/WwTWzrI.png)
 - [**Spams your logs v3**](https://i.imgur.com/ExwvQrU.png)
@@ -50,4 +51,4 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
     - [Example 2](https://i.imgur.com/ZjTpUCd.png)
 
 # Even if you already bought SBE, do NOT use it!
-If you already did buy it, the Sunk Cost Fallacy makes it so that you still shouldn't use it. The money you spent is already long gone and no longer plays a factor in your decision making. Using the $5 as an excuse to continue using SBE is the irrational decision. Think of it as buying a broken spoon that barely works, and then finding a brand new working one in your drawer. There is no reason to continue using the broken spoon. Even if you do use it, you're not getting your money's worth out of it. That money was thrown away and nothing can be done about it. Same applies for SBE. Your money is gone. Remove SBE from your device.
+If you already did buy it, the Sunk Cost Fallacy makes it so that you still shouldn't use it. The money you spent is already long gone and no longer plays a factor in your decision making. Using the $5 as an excuse to continue using SBE is the irrational decision. Think of it as buying a broken spoon that barely works, and then finding a brand new and perfectly working one in your drawer. There is no reason to continue using the broken spoon. Even if you do use it, you're not getting your money's worth out of it. That money was thrown away and nothing can be done about it. Same applies for SBE. Your money is gone. Remove SBE from your device.

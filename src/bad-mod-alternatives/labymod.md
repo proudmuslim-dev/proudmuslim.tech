@@ -37,7 +37,7 @@
 - **Disable Chat Background** - [Sk1er's Patcher](https://sk1er.club/mods/patcher) / [LlamaLad7's Better Chat](https://www.curseforge.com/minecraft/mc-mods/better-chat/files/3048404)
 - **Advanced Chat Settings** - [LlamaLad7's Better Chat](https://www.curseforge.com/minecraft/mc-mods/better-chat/files/3048404)
 - **Adjustable Chat** - [LlamaLad7's Better Chat](https://www.curseforge.com/minecraft/mc-mods/better-chat/files/3048404)
-- **Secondary Chat** - [5Zig's Reborn](https://5zigreborn.eu/)
+- **Secondary Chat** - [5Zig Reborn](https://5zigreborn.eu/)
 
 # PvP
 - **Speed FOV** - [sp614x's OptiFine](https://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar)
@@ -51,7 +51,7 @@
 - **Public Server List** - none
 - **Multiplayer Menu Ingame** - [Canalex's InGameServerSwitcher](https://www.youtube.com/watch?v=04EangMQd7I) / [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 - **Borderless Window** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
-- **Improved Skin Customization** - None ([Sk1er's Patcher](https://sk1er.club/mods/patcher) does add 1.9+ skin transparency however)
+- **Improved Skin Customization** - None ([Sk1er's Patcher](https://sk1er.club/mods/patcher) does add 1.9+ skin transparency, however)
 - **Better Shader Selection** - None
 - **Live Serverlist** - None
 - **Custom Inventory Scale** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)

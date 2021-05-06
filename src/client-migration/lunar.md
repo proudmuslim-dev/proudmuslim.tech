@@ -62,7 +62,7 @@ _HUD Options_
 - **Use Minecraft GUI Scale** - Irrelevant
 
 _Cosmetic Options_
-- **Cosmetics** - [Sk1er's ModCore](https://sk1er.club/modcore) (Capes Violate EULA and are therefore not included)
+- **Cosmetics** - [Sk1er's ModCore](https://sk1er.club/modcore) (Capes Violate Minecraft's EULA and are therefore not included)
 - **Show Nametag Icon** - Irrelevant
 - **Third Person Nametag** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 - **Show Tab Icon** - [Sk1er's ModCore](https://sk1er.club/modcore)
