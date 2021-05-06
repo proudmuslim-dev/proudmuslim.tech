@@ -21,7 +21,7 @@
 
 # Fixing Bad Mod Folders
 
-- [Refraction's Mod Folder v4](./mod-folder-updates/refractionv4.md)
+- [Refraction's Mod Folder v4](./mod-folder-updates/refraction.md)
 
 # Misc
 
