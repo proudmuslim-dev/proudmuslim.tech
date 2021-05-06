@@ -28,7 +28,7 @@
 - **Clock** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
 - **Stopwatch** - [BatHeart's Batty's Coords PLUS](https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073)
 - **Memory Usage** - [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
-- **Combo Counter** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD)
+- **Combo Counter** - None
 - **Reach Display** - [Dewgs's ReachDisplay](https://www.youtube.com/watch?v=myQKoGnCjxY)
 - **Timechanger** [Shatterpoint's Revamped Timechanger](https://github.com/shatter-point/Revamped-TimeChanger/releases)
 - **Server Address** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
@@ -38,7 +38,7 @@
 - **Shiny Pots** - [RoccoDev's ShinyPots](https://github.com/RoccoDev/ShinyPots-1.8/releases/tag/1.5)
 - **Block Outline** - [Aycy's BlockOverlay](https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/)
 - **Screenshot Uploader** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
-- **FOV Mod** - [Sk1er Patcher](https://sk1er.club/mods/patcher)
+- **FOV Mod** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 - **Auto Text Hot Key** (!!! Bannable on Hypixel !!!) - [MattsOnMC's MacroKey Keybinding](https://www.curseforge.com/minecraft/mc-mods/macrokey-keybinding/files/2659839) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
 - **Net Graph** - None
 - **Mumble Link** - [snipingcoward's Mumble Link](https://www.curseforge.com/minecraft/mc-mods/mumblelink/files/2327154)
