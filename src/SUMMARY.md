@@ -19,6 +19,10 @@
 - [Labymod](./bad-mod-alternatives/labymod.md)
 - [SBE](./bad-mod-alternatives/sbe.md)
 
+# Fixing Bad Mod Folders
+
+- [Refraction's Mod Folder v4](./mod-folder-updates/refractionv4.md)
+
 # Misc
 
 - [Credits](./credits.md)
