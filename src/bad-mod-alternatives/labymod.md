@@ -25,7 +25,7 @@
 - **Chunk Caching** - None, servers must have support for it anyway.
 - **Fast World Loading** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 - **Hide Entities Behind Blocks** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
-- **Hide Backside of Entitities** - None ([Sk1er Patcher](https://sk1er.club/mods/patcher) will most likely help performance more than this does)
+- **Hide Backside of Entitities** - None ([Sk1er's Patcher](https://sk1er.club/mods/patcher) will most likely help performance more than this does)
 
 # Minecraft Chat
 - **Autotext** (**!!! Bannable on Hypixel !!!**) - [MattsOnMC's MacroKey Keybinding](https://www.curseforge.com/minecraft/mc-mods/macrokey-keybinding/files/2659839) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
@@ -40,7 +40,7 @@
 - **Secondary Chat** - [5Zig's Reborn](https://5zigreborn.eu/)
 
 # PvP
-- **Speed FOV** - [sp614x's OptiFine](https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar)
+- **Speed FOV** - [sp614x's OptiFine](https://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar)
 - **Swap Bow** - None
 
 # Menu GUI
@@ -82,7 +82,7 @@ _Information_
 - **Server Support** - None
 - **Potion Effects** - [Powns's PotionHud](https://download.powns.dev/potionhud189) / [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
 - **Scoreboard** - [Canelex & Powns's Sidebar Mod Revamp](https://www.youtube.com/watch?v=cn9VvT43yRs)
-- **Combo** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD)
+- **Combo** - None
 - **Range** - [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
 - **Speed** - [squeek502's Squeedometer](https://www.curseforge.com/minecraft/mc-mods/squeedometer/files/2495576) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/)
 
@@ -113,7 +113,7 @@ _Miscellaneous_
 - **ConnectionHistory** - None
 - **Controller** - None
 - **Custom Block Overlay** - [Aycy's BlockOverlay](https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/)
-- **Custom Crosshair Mod** - [Sparkless's Custom Crosshair](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/2304056)
+- **Custom Crosshair Mod** - [Sparkless's Custom Crosshair](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/3164058)
 - **Custom Hitboxes** - [Aycy's HitboxColors](http://www.mediafire.com/file/rci3i8m09yoek7u/HitboxColors-v1.0.jar)
 - **CustomFilterSounds** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 - **CustomFont** - [bre2el's SmoothFont](https://www.curseforge.com/minecraft/mc-mods/smooth-font/files/2568454)
@@ -140,7 +140,7 @@ _Miscellaneous_
 - **MiniMap** (**!!! Bannable on Hypixel !!!**) - [MamiyaOtaru's VoxelMap](https://www.curseforge.com/minecraft/mc-mods/voxelmap/files/2460202) (requires [LiteLoader](http://www.liteloader.com/download#snapshot_1890)) / [Techbrew & Mysticdrew's JourneyMap](https://www.curseforge.com/minecraft/mc-mods/journeymap/files/2311867) / [Powns's Simple MiniMap](https://github.com/pownsgg/MiniMap)
 - **More Particles** - [Dewgs's ParticleMod](https://www.mediafire.com/file/z42f9gzegatz9cq/%255B1.8.9%255DParticleMod-1.02.jar/file) / [Aycy's OnHitParticles](https://www.youtube.com/watch?v=OQZFWrrEcYM)
 - **Motion Blur** - [Moulberry's Motionblur (BETA)](https://cdn.discordapp.com/attachments/733903046681034813/806188815286665226/MbMotionblur-1.0-REL-Fixed.jar) (Must join Sk1er Discord for link to work) / [Sk1er's Motionblur](https://sk1er.club/mods/motionblurmod)
-- **OptiFine** - [sp614x's OptiFine](https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M6_pre1.jar)
+- **OptiFine** - [sp614x's OptiFine](https://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar)
 - **Rainbow GUI** - [Sk1er's ChromaHUD](https://sk1er.club/mods/ChromaHUD)
 - **ResourcePack 24** - [Official Mod](https://resourcepacks24.de/texturepack-mod) / [Aycy's Resource Pack Manager](https://www.youtube.com/watch?v=OQZFWrrEcYM) (Only adds ability to make folders)
 - **Send To Server** - None
