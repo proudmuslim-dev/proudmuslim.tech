@@ -61,7 +61,7 @@
 - ToggleChat - [boomboompower ToggleChat](https://hypixel.net/threads/version-2-1-togglechat-mod-theme-switcher.997547/)
 - Custom Crosshair - [Sparkless101 Custom Crosshair](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod)
 - Popup Events - [Sk1er Popup Events](https://sk1er.club/mods/popup_events)
-- (Hyperium's) Reach Display - None
+- (Hyperium's) Reach Display - [isXander's EvergreenHUD](https://github.com/isXander/EvergreenHUD)
 - Numeric Ping - [Sk1er Patcher](https://sk1er.club/mods/patcher)
 - Show amount of currently held item - [Sk1er Patcher](https://sk1er.club/mods/patcher)
 - Show enchantments above hotbar - [Sk1er Patcher](https://sk1er.club/mods/patcher)
