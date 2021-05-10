@@ -11,7 +11,7 @@
 -   **Clear chat** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 -   **Clan wars** (unknown)
 -   **Clear Water** - [sp614x's OptiFine](https://optifine.net/adloadx?f=OptiFine_1.8.9_HD_U_M5.jar)
--   **Combo Counter** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD)
+-   **Combo Counter** - None
 -   **Coordinates** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD) / [BatHeart's Batty's Coords PLUS](https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073) / [Powns's Coords Hud](https://download.powns.dev/coordsmod189)
 -   **Crosshair Mod** - [Sparkless's Custom Crosshair](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/3302478)
 -   **Direction Mod** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD)
