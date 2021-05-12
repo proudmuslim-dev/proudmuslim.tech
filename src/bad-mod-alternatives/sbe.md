@@ -14,12 +14,13 @@
 Note: It is not recommended that you use SkyblockCatia either since that mod has a large amount of incompatibilities with other mods, along with a bunch of features that aren't even for Skyblock, making it a very bloated mod.
 
 # Reasons NOT to Buy or Use SBE:
-- [**Poor puzzle solvers**](https://i.imgur.com/zXydj0j.png)
-- **Poor features**
+- [**Poorly made puzzle solvers**](https://i.imgur.com/zXydj0j.png)
+- **Poorly made features**
     - [Example 1](https://i.imgur.com/T3V8kDQ.png)
     - [Example 2](https://i.imgur.com/mFdaV2n.png)
     - [Example 3](https://i.imgur.com/yAtQ9ay.png)
     - [Example 4](https://i.imgur.com/gl0EF9g.png)
+    - [Example 5](https://i.imgur.com/0BFk3yw.png)
 - [**Obfuscated**](https://i.imgur.com/r5RROwf.png)
     - Context: This means we can't read the code unless we spend hours deciphering it. This makes the mod very unsafe as it could be doing anything behind the user's back. It also spams the user's logs and is used to hide stolen code.
 - **Has very poor code**
