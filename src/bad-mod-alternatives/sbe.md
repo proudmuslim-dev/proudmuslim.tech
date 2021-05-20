@@ -37,6 +37,7 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
     - [Testimony 2](https://i.imgur.com/YX86ELc.png)
     - [Testimony 3](https://i.imgur.com/vpl5i2B.png)
     - [Testimony 4](https://i.imgur.com/ox4btVT.png)
+    - [Testimony 5](https://i.imgur.com/FuG9G5P.png)
     - SBE is notorious for destroying your FPS. The developers' attempt at fixing it was blatantly stealing FPS improvement features from Patcher.
        - While Skyblock mods in general are known to be heavy on performance, SBE has a much larger impact than any of its alternatives.
 - **Use pirated software to protect against piracy**
@@ -51,7 +52,9 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
 - [**Blatantly steals from SBC**](https://i.imgur.com/n7T9DkB.png)
 - **Blatantly steals from Patcher**
     - Context: When patcher 1.5 was in beta and 1.12 crop hitboxes were added, they were bugged and broken. When the SBE developers "made" their version, they somehow managed to produce the exact same bug. Moulberry came in and fixed the glitch, resulting in the SBE developers claiming that they "found out" how to fix it.
-    - [Side by side code comparison](https://hst.sh/xetawopini.java) showing that the code is now the exact same.
+        - [Side by side code comparison](https://hst.sh/xetawopini.java) showing that the code is now the exact same.
+    - SBE has a chat timestamp feature, which while not being "stolen" per say, does not belong in a Skyblock mod anyways.
+    - SBE developers claim that these features are "for people who don't use Patcher". However, Patcher is an all-purpose mod that brings many [bug fixes, performance improvements, and QOL features](https://github.com/LunaNotdev/Patcher-Explanation/blob/main/README.md) that everyone should be using regardless.
 - [**Blatantly steals from NEU**](https://i.imgur.com/nNJp8bD.png)
     - Context: NEU had originally made a feature that allowed you to re-texture skulls with custom models. On the SBE discord, they had expressly stated that they would not be stealing features from other mods and people should not request them to add stolen features. Moulberry was annoyed at SBE at the time for blatantly stealing features and was saying on stream he was going to add dungeon puzzle solvers to make SBE useless. It was only after that threat that they put out that statement, but when Moulberry decided against dungeon puzzle solvers, they went straight back to stealing.
 - **Blatantly steals from Skytils**
@@ -67,11 +70,13 @@ Note: It is not recommended that you use SkyblockCatia either since that mod has
     - Are rude to other mod developers and abuse any power they have over them. Things that they have done in the past (and continue doing) include but are not limited to:
         - Banning them from their own server and [other Skyblock servers](https://i.imgur.com/Bye0N9v.png).
         - Removing their roles in other servers.
+        - Blocking them
 - **Rude staff**
     - [Example 1](https://i.imgur.com/oWT1CJj.png)
     - [Example 2](https://i.imgur.com/ZjTpUCd.png)
     - [Example 3](https://i.imgur.com/pZ2y2mB.png)
     - [Example 4](https://i.imgur.com/GUek5Wb.png)
+    - [Example 5](https://i.imgur.com/BXUjqql.png)
     - [Testimony 1](https://i.imgur.com/SIjMpFr.png)
     - [Testimony 2](https://i.imgur.com/Ax7HjOn.png)
     - If you have a problem with SBE, getting help on the SBE Discord server can be difficult. It is also hard to get help on any other discord server because of SBE's obfuscation and paywall.
