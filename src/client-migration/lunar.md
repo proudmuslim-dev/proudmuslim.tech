@@ -1,7 +1,7 @@
 # Migrating From Lunar Client
 
 ## Mods
-- **1.7 Visuals** - [Sk1er's Old Animations (Beta](https://sk1er.club/beta) - Only currently available in Sk1er's Discord) / [Aycy's Damage Tint](https://hypixel.net/threads/forge-1-8-9-damage-tint-v2-0.2008597/)
+- **1.7 Visuals** - [Sk1er's Old Animations (Beta)](https://sk1er.club/beta) - (Currently only available in Sk1er's Discord) / [Aycy's Damage Tint](https://hypixel.net/threads/forge-1-8-9-damage-tint-v2-0.2008597/)
 - **FPS** - [Sk1er's ChromaHud](https://sk1er.club/mods/ChromaHUD) / [BatHeart's Batty's Coords PLUS](https://www.curseforge.com/minecraft/mc-mods/batty-ui/files/2272073) / [Sk1er's Keystrokes](https://sk1er.club/mods/keystrokesmod) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/) / [Aycy's MiniInfo](https://www.youtube.com/watch?v=9OwPMxBzQog)
 - **CPS** - [Sk1er's Keystrokes](https://sk1er.club/mods/keystrokesmod) / [RoccoDev's 5Zig Reborn](https://5zigreborn.eu/) / [Senoe's CPS](https://ofpyt.weebly.com/189-chroma-cpsmod-20-release.html) / [Aycy's MiniInfo](https://www.youtube.com/watch?v=9OwPMxBzQog)
 - **Skyblock Addons** (and more) - [Biscuit's SBA](https://biscuit.codes/mods/skyblockaddons/downloadversion/?v=latest) & [Moulberry's NEU](https://github.com/Moulberry/NotEnoughUpdates/releases/) (join Discord for working version) & [Danker's Skyblock Mod](https://github.com/bowser0000/SkyblockMod/) & [Sychic & Lily's Skytils](https://github.com/Skytils/SkytilsMod/releases/) & [Cow's Cowlection](https://github.com/cow-mc/Cowlection/releases/)
