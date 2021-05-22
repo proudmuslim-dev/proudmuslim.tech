@@ -24,7 +24,7 @@
 -   **Hitboxes - F3 + B** / [Sk1er's Old Animations](https://sk1er.club/beta) (adds back 1.7 style hitboxes)
 -   **Inventory Blur** - [tterrag's Blur](https://www.curseforge.com/minecraft/mc-mods/blur/files/2665186)
 -   **Ingame Server Switcher** - [Canalex's InGameServerSwitcher](https://www.youtube.com/watch?v=04EangMQd7I) / [Sk1er's Patcher](https://sk1er.club/mods/patcher) (currently logs you out)
--   **Item Counter** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
+-   **Item Counter** - [DoKM's Item Counter](https://hypixel.net/threads/1-8-9-item-counter-mod.3683685/)
 -   **Item-Info** - [Sk1er's Patcher](https://sk1er.club/mods/patcher)
 -   **Item Physics** - [CreativeMD's ItemPhysic Lite](https://www.curseforge.com/minecraft/mc-mods/itemphysic-lite/files/2439695)
 -   **JustEnoughItems** - [mezz's JEI](https://www.curseforge.com/minecraft/mc-mods/jei/files/2431977)
