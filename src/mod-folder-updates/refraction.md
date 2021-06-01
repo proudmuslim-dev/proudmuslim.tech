@@ -7,7 +7,7 @@
 - [**Update PerspectiveMod**](https://github.com/DJtheRedstoner/PerspectiveModv4/releases/)
 - [**Update Scrollable tooltips**](https://sk1er.club/mods/text_overflow_scroll)
 - [**Update AutoGG**](https://sk1er.club/mods/autogg)
-- [**Update Levelhead*](https://sk1er.club/mods/level_head)
+- [**Update Levelhead**](https://sk1er.club/mods/level_head)
 - [**Update ToggleChat**](https://github.com/boomboompower/ToggleChat/releases/)
 - [**Update OofMod**](https://sk1er.club/mods/refractionoof)
 - [**Update TimeChanger**](https://github.com/shatter-point/Revamped-TimeChanger/releases/)
