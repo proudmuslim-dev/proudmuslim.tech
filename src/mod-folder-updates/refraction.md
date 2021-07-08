@@ -1,28 +1,37 @@
 # Update
 
-- [**Update OptiFine**](https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M5.jar)
-- [**Update Patcher**](https://sk1er.club/mods/patcher)
-- [**Update SkyblockAddons**](https://biscuit.codes/mods/skyblockaddons/downloadversion/?v=latest)
-- [**Update BlockOverlay**](https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/)
-- [**Update PerspectiveMod**](https://github.com/DJtheRedstoner/PerspectiveModv4/releases/)
-- [**Update Scrollable tooltips**](https://sk1er.club/mods/text_overflow_scroll)
-- [**Update AutoGG**](https://sk1er.club/mods/autogg)
-- [**Update Levelhead**](https://sk1er.club/mods/level_head)
-- [**Update ToggleChat**](https://github.com/boomboompower/ToggleChat/releases/)
-- [**Update OofMod**](https://sk1er.club/mods/refractionoof)
-- [**Update TimeChanger**](https://github.com/shatter-point/Revamped-TimeChanger/releases/)
-- [**Update CustomCrosshair**](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/3302478)
-- [**Update ChatTriggers (ctjs)**](https://github.com/ChatTriggers/ChatTriggers/releases/download/1.3.1/ctjs-1.3.1-1.8.9.jar) (If you do not use any CT modules, delete this instead)
+- [**OptiFine**](https://optifine.net/adloadx?f=preview_OptiFine_1.8.9_HD_U_M5.jar)
+- [**Patcher**](https://sk1er.club/mods/patcher)
+- [**SkyblockAddons**](https://biscuit.codes/mods/skyblockaddons/downloadversion/?v=latest)
+- [**BlockOverlay**](https://hypixel.net/threads/forge-1-8-9-block-overlay-v4-0-3.1417995/)
+- [**PerspectiveMod**](https://github.com/DJtheRedstoner/PerspectiveModv4/releases/latest)
+- [**Scrollable tooltips**](https://sk1er.club/mods/text_overflow_scroll)
+- [**AutoGG**](https://sk1er.club/mods/autogg)
+- [**Levelhead**](https://sk1er.club/mods/level_head)
+- [**ToggleChat**](https://github.com/boomboompower/ToggleChat/releases/)
+- [**OofMod**](https://sk1er.club/mods/refractionoof)
+- [**TimeChanger**](https://github.com/shatter-point/Revamped-TimeChanger/releases/latest)
+- [**CustomCrosshair**](https://www.curseforge.com/minecraft/mc-mods/custom-crosshair-mod/files/all?filter-game-version=2020709689%3A5806)
+- [**ctjs**](https://github.com/ChatTriggers/ChatTriggers/releases/latest) (If you do not use any CT modules, delete this instead)
 
 # Replace
 
-- [**Replace Canalex's Keystrokes with Sk1er's**](https://sk1er.club/mods/keystrokesmod)
-- [**Replace oldanimations mod with Sk1er's**](https://sk1er.club/beta)
+- [**Canalex's Keystrokes with Sk1er's**](https://sk1er.club/mods/keystrokesmod)
+  - Old and no longer maintained. Sk1er's will continue to receive updates once ModCore 2 is released.
+- [**spiderfrog's old animations with Sk1er's**](https://sk1er.club/beta)
+  - Spiderfrog's OAM causes many issues with other mods, is bloated, and causes crashes. Sk1er's is more accurate to 1.7 and has better compatibility and no bloat.
 
 # Remove
 
-- **Remove Modcore Container**
-- **Remove Player API**
-- **Remove AutoWho**
-- **Remove Skypixel**
-- **Remove LabyMod** - Alternatives can be found [here](https://proudmuslim.tech/bad-mod-alternatives/labymod.html)
+- **ModCore Container**
+  - Modcore Container was a mod meant to give players ModCore before it was packaged in mods that needed it. It is now useless and could cause issues when ModCore 2 comes out.
+- **Player API**
+  - Player API is no longer used in any mods.
+- **AutoWho**
+  - Hypixel removed AutoWho's core functionality a few years ago.
+- **Skypixel**
+  - Skypixel is old, not maintained, and has many features that are either useless, or simply do not work anymore.
+- [**LabyMod**](https://github.com/MicrocontrollersDev/Alternatives/blob/main/LabyMod.md)
+  - LabyMod causes many issues with other mods, and has many alternatives that can be used without messing up other mods.
+- [**SkyblockExtras**](https://github.com/MicrocontrollersDev/Alternatives/blob/main/SkyblockExtras.md) (if you bought it)
+  - SBE breaks EULA, breaks some licenses, leads to poor FPS, and has much better free alternatives for all of its important features. 
